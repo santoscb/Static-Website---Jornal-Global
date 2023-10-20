@@ -4,4 +4,4 @@ Vamos como criar um website estático para que leitores de um jornal enviem suas
 ![image](https://github.com/santoscb/Static-Website---Jornal-Global/assets/104686090/7f3d126b-6151-4f57-8828-e6a09394149c)
 
 
-##Estrutura final do projeto
+## Estrutura final do projeto
