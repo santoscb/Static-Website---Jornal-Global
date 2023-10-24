@@ -7,25 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
 
-
     <title>[Jornal Global]</title>
     <script>
-      // define a função callAPI que pega o nome, email e comentário
       var callAPI = (nome,email,comentario)=>{
-          // inicializa um headers object
           var myHeaders = new Headers();
-          // adicione o tipo de conteúdo header ao object
           myHeaders.append("Content-Type", "application/json");
-          // using built in JSON utility package turn object to string and store in a variable
           var raw = JSON.stringify({"nome":nome,"email":email,"comentario":comentario});
-          // create a JSON object with parameters for API call and store in a variable
           var requestOptions = {
               method: 'POST',
               headers: myHeaders,
               body: raw,
               redirect: 'follow'
           };
-          // make API call with parameters and use promises to get response
           fetch("https://2l11rb6pba.execute-api.us-east-2.amazonaws.com/Dev", requestOptions)
           .then(response => response.text())
           .then(result => alert(JSON.parse(result).body))
