@@ -18,4 +18,4 @@
             'ID': email
             })
   ```
-     -  O email foi colocado como primary key para que nenhum envio seja reescrito, uma vez que o nome e o comentário podem ser repetidos.
+     -  O email foi colocado como partition key para que nenhum envio seja reescrito, uma vez que o nome e o comentário podem ser repetidos.
